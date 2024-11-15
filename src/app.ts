@@ -66,11 +66,21 @@
 // console.log(res);
 
 // Q8. Find the age of a person
-function calculatedage(dob: Date) {
-  var diff_ms = Date.now() - dob.getTime();
-  var age_dt = new Date(diff_ms);
-  return Math.abs(age_dt.getUTCFullYear() - 1970);
+function calculateAge(birthDate: Date): number {
+  const today = new Date();
+  const birthYear = birthDate.getFullYear();
+  const birthMonth = birthDate.getMonth();
+  const birthDay = birthDate.getDate();
+  let age = today.getFullYear() - birthYear;
+  if (
+    today.getMonth() < birthMonth ||
+    (today.getMonth() === birthMonth && today.getDate() < birthDay)
+  ) {
+    age--;
+  }
+  return age;
 }
-console.log(calculatedage(new Date(1999, 1, 26)));
-
+const birthDate = new Date(1999, 1, 26);
+const age = calculateAge(birthDate);
+console.log(`The person's age is ${age}.`);
 
