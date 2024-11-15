@@ -65,6 +65,12 @@
 // let res = [...new Set(arr)];
 // console.log(res);
 
-
+// Q8. Find the age of a person
+function calculatedage(dob: Date) {
+  var diff_ms = Date.now() - dob.getTime();
+  var age_dt = new Date(diff_ms);
+  return Math.abs(age_dt.getUTCFullYear() - 1970);
+}
+console.log(calculatedage(new Date(1999, 1, 26)));
 
 
