@@ -66,21 +66,32 @@
 // console.log(res);
 
 // Q8. Find the age of a person
-function calculateAge(birthDate: Date): number {
-  const today = new Date();
-  const birthYear = birthDate.getFullYear();
-  const birthMonth = birthDate.getMonth();
-  const birthDay = birthDate.getDate();
-  let age = today.getFullYear() - birthYear;
-  if (
-    today.getMonth() < birthMonth ||
-    (today.getMonth() === birthMonth && today.getDate() < birthDay)
-  ) {
-    age--;
+// function calculateAge(birthDate: Date): number {
+//   const today = new Date();
+//   const birthYear = birthDate.getFullYear();
+//   const birthMonth = birthDate.getMonth();
+//   const birthDay = birthDate.getDate();
+//   let age = today.getFullYear() - birthYear;
+//   if (
+//     today.getMonth() < birthMonth ||
+//     (today.getMonth() === birthMonth && today.getDate() < birthDay)
+//   ) {
+//     age--;
+//   }
+//   return age;
+// }
+// const birthDate = new Date(1999, 1, 26);
+// const age = calculateAge(birthDate);
+// console.log(`The person's age is ${age}.`);
+
+// Find the non repeating character from this string
+const str = "aaeeedrrwwww";
+let res = "";
+for (let char of str) {
+  if (str.indexOf(char) === str.lastIndexOf(char)) {
+    res = char;
+    break;
   }
-  return age;
 }
-const birthDate = new Date(1999, 1, 26);
-const age = calculateAge(birthDate);
-console.log(`The person's age is ${age}.`);
+console.log(res);
 
