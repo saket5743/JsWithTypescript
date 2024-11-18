@@ -85,13 +85,40 @@
 // console.log(`The person's age is ${age}.`);
 
 // Find the non repeating character from this string
-const str = "aaeeedrrwwww";
-let res = "";
-for (let char of str) {
-  if (str.indexOf(char) === str.lastIndexOf(char)) {
-    res = char;
-    break;
+// const str = "aaeeedrrwwww";
+// let res = "";
+// for (let char of str) {
+//   if (str.indexOf(char) === str.lastIndexOf(char)) {
+//     res = char;
+//     break;
+//   }
+// }
+// console.log(res);
+
+// Count Vowels and Consonants
+// Count the number of vowels and consonants in a string.
+// Example:
+// Input: "hello"
+// Output: Vowels: 2, Consonants: 3
+function findVowelsandConstants(input: string) {
+  const vowels = 'aeiouAEIOU'
+  let vowelCount = 0;
+  let constantCount = 0;
+
+  for (let char of input) {
+    if (char.match(/[a-zA-Z]/)) {
+      if (vowels.includes(char)) {
+        vowelCount++;
+      } else {
+        constantCount++;
+      }
+    }
+  }
+  return {
+    vowels: vowelCount,
+    consonants: constantCount
   }
 }
-console.log(res);
 
+const res = findVowelsandConstants("hello")
+console.log(res);
