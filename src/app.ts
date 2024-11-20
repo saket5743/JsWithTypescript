@@ -124,12 +124,24 @@
 // console.log(res);
 
 // Q11. Armstrong number
-function isArmstrong(num: number) {
-  let sum = 0;
-  const numstr = num.toString();
-  for (let char of numstr) {
-    sum += Math.pow(parseInt(char), 3);
-  }
-  return sum === num;
+// function isArmstrong(num: number) {
+//   let sum = 0;
+//   const numstr = num.toString();
+//   for (let char of numstr) {
+//     sum += Math.pow(parseInt(char), 3);
+//   }
+//   return sum === num;
+// }
+// console.log(isArmstrong(153))
+
+// Q12. Write a function to check if two strings are anagrams of each other.
+// Example:
+// Input: "listen", "silent"
+// Output: true
+function checkAnagrams(str1: string, str2: string) {
+  let stri1 = str1.split("").sort().join("");
+  let stri2 = str2.split("").sort().join("");
+  return stri1 === stri2;
 }
-console.log(isArmstrong(153))
+console.log(checkAnagrams("listen", "silent"));
+
