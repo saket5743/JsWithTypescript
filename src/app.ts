@@ -6,7 +6,7 @@
 //   console.log(n1);
 //   nextTerm = n1 + n2;
 //   n1 = n2;
-//   n2 = nextTerm;
+//   n2 = nextTerm
 // }
 
 // Q2. Prime Number
@@ -84,7 +84,7 @@
 // const age = calculateAge(birthDate);
 // console.log(`The person's age is ${age}.`);
 
-// Find the non repeating character from this string
+// Q9. Find the non repeating character from this string
 // const str = "aaeeedrrwwww";
 // let res = "";
 // for (let char of str) {
@@ -96,29 +96,40 @@
 // console.log(res);
 
 // Count Vowels and Consonants
-// Count the number of vowels and consonants in a string.
+// Q10. Count the number of vowels and consonants in a string.
 // Example:
 // Input: "hello"
 // Output: Vowels: 2, Consonants: 3
-function findVowelsandConstants(input: string) {
-  const vowels = 'aeiouAEIOU'
-  let vowelCount = 0;
-  let constantCount = 0;
+// function findVowelsandConstants(input: string) {
+//   const vowels = 'aeiouAEIOU'
+//   let vowelCount = 0;
+//   let constantCount = 0;
 
-  for (let char of input) {
-    if (char.match(/[a-zA-Z]/)) {
-      if (vowels.includes(char)) {
-        vowelCount++;
-      } else {
-        constantCount++;
-      }
-    }
+//   for (let char of input) {
+//     if (char.match(/[a-zA-Z]/)) {
+//       if (vowels.includes(char)) {
+//         vowelCount++;
+//       } else {
+//         constantCount++;
+//       }
+//     }
+//   }
+//   return {
+//     vowels: vowelCount,
+//     consonants: constantCount
+//   }
+// }
+
+// const res = findVowelsandConstants("hello")
+// console.log(res);
+
+// Q11. Armstrong number
+function isArmstrong(num: number) {
+  let sum = 0;
+  const numstr = num.toString();
+  for (let char of numstr) {
+    sum += Math.pow(parseInt(char), 3);
   }
-  return {
-    vowels: vowelCount,
-    consonants: constantCount
-  }
+  return sum === num;
 }
-
-const res = findVowelsandConstants("hello")
-console.log(res);
+console.log(isArmstrong(153))
