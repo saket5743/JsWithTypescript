@@ -138,10 +138,27 @@
 // Example:
 // Input: "listen", "silent"
 // Output: true
-function checkAnagrams(str1: string, str2: string) {
-  let stri1 = str1.split("").sort().join("");
-  let stri2 = str2.split("").sort().join("");
-  return stri1 === stri2;
+// function checkAnagrams(str1: string, str2: string) {
+//   let stri1 = str1.split("").sort().join("");
+//   let stri2 = str2.split("").sort().join("");
+//   return stri1 === stri2;
+// }
+// console.log(checkAnagrams("listen", "silent"));
+
+// Q13. Write a JavaScript function that merges two arrays and removes all duplicate elements.
+let array1 = [1, 2, 3];
+let array2 = [2, 30, 1];
+function mergeAndRemoveDuplicate(array1: number[], array2: number[]) {
+  const result = array1.concat(array2);
+  const unique = [...new Set(result)]
+  return unique
 }
-console.log(checkAnagrams("listen", "silent"));
+console.log(mergeAndRemoveDuplicate(array1, array2));   // [1,2,3,30]
+
+// Q14. Write a JavaScript program to convert a string to title case (capitalize the first letter of each word).
+function firstIsCapt(str: string) {
+  const capit = str.split(" ").map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()).join(" ")
+  return capit
+}
+console.log(firstIsCapt("saket kumar"))
 
