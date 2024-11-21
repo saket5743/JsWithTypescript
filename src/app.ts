@@ -134,7 +134,7 @@
 // }
 // console.log(isArmstrong(153))
 
-// Q12. Write a function to check if two strings are anagrams of each other.
+// Q12. Write a function to check if two strings are same as of each other.
 // Example:
 // Input: "listen", "silent"
 // Output: true
@@ -150,8 +150,8 @@ let array1 = [1, 2, 3];
 let array2 = [2, 30, 1];
 function mergeAndRemoveDuplicate(array1: number[], array2: number[]) {
   const result = array1.concat(array2);
-  const unique = [...new Set(result)]
-  return unique
+  const uniqueword = [...new Set(result)]
+  return uniqueword
 }
 console.log(mergeAndRemoveDuplicate(array1, array2));   // [1,2,3,30]
 
