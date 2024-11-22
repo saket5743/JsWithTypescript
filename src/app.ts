@@ -138,27 +138,64 @@
 // Example:
 // Input: "listen", "silent"
 // Output: true
-// function checkAnagrams(str1: string, str2: string) {
+// function checkequal(str1: string, str2: string) {
 //   let stri1 = str1.split("").sort().join("");
 //   let stri2 = str2.split("").sort().join("");
 //   return stri1 === stri2;
 // }
-// console.log(checkAnagrams("listen", "silent"));
+// console.log(checkequal("listen", "silent"));
 
 // Q13. Write a JavaScript function that merges two arrays and removes all duplicate elements.
-let array1 = [1, 2, 3];
-let array2 = [2, 30, 1];
-function mergeAndRemoveDuplicate(array1: number[], array2: number[]) {
-  const result = array1.concat(array2);
-  const uniqueword = [...new Set(result)]
-  return uniqueword
-}
-console.log(mergeAndRemoveDuplicate(array1, array2));   // [1,2,3,30]
+// let array1 = [1, 2, 3];
+// let array2 = [2, 30, 1];
+// function mergeAndRemoveDuplicate(array1: number[], array2: number[]) {
+//   const result = array1.concat(array2);
+//   const uniqueword = [...new Set(result)]
+//   return uniqueword
+// }
+// console.log(mergeAndRemoveDuplicate(array1, array2));   // [1,2,3,30]
 
 // Q14. Write a JavaScript program to convert a string to title case (capitalize the first letter of each word).
-function firstIsCapt(str: string) {
-  const capit = str.split(" ").map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()).join(" ")
-  return capit
-}
-console.log(firstIsCapt("saket kumar"))
+// function firstIsCapt(str: string) {
+//   const capit = str.split(" ").map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()).join(" ")
+//   return capit
+// }
+// console.log(firstIsCapt("saket kumar"))
+
+// Q15. Write a JavaScript function that takes a string and returns the string with all vowels removed.
+// function vowelRemoved(str: string) {
+//   const vowels = /[aeiouAEIOU]/g
+//   const result = str.replace(vowels, "")
+//   return result;
+// }
+// console.log(vowelRemoved('saket kumar'))
+
+// Q16. Replace the underscore with space and capitalize word.
+// function replaceUnderscore(str: string) {
+//   const undr = str.split("_").map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()).join(" ")
+//   return undr
+
+// }
+// console.log(replaceUnderscore("saket_kumar_manglam"))
+
+// Q17. Find the repeating element and their counts.
+// function repeArr(str: string) {
+//   let count = 1;
+//   let result = ""
+//   let temp = str.split("")
+//   for (let i = 0; i < temp.length; i++) {
+//     if (temp[i] === temp[i + 1]) {
+//       count++
+//     } else {
+//       result = result + count + temp[i]
+//       count = 1
+//     }
+//   }
+//   return result;
+// }
+// console.log(repeArr('aabbccddeeefffffggggghhi'));
+
+// Q18. 
+
+
 
