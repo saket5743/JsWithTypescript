@@ -195,7 +195,11 @@
 // }
 // console.log(repeArr('aabbccddeeefffffggggghhi'));
 
-// Q18. 
+// Q18. Create a function that takes a word and returns the new word without including the first character.
+function charRemove(str:string){
+  return str.slice(1)
+}
+console.log(charRemove('saket'))
 
 
 
