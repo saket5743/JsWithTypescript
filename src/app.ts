@@ -196,10 +196,16 @@
 // console.log(repeArr('aabbccddeeefffffggggghhi'));
 
 // Q18. Create a function that takes a word and returns the new word without including the first character.
-function charRemove(str:string){
-  return str.slice(1)
-}
-console.log(charRemove('saket'))
+// function charRemove(str:string){
+//   return str.slice(1)
+// }
+// console.log(charRemove('saket'))
 
+// Q19. Write a JavaScript program that accepts a string as input and swaps the case of each character. For example if you input 'The Quick Brown Fox' the output should be 'tHE qUICK bROWN fOX'.
+function swapChar(str: string) {
+  const result = str.split(" ").map(word => word.charAt(0).toLowerCase() + word.slice(1).toUpperCase()).join(" ")
+  return result
+}
+console.log(swapChar('The Quick Brown Fox'))
 
 
