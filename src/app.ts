@@ -202,10 +202,27 @@
 // console.log(charRemove('saket'))
 
 // Q19. Write a JavaScript program that accepts a string as input and swaps the case of each character. For example if you input 'The Quick Brown Fox' the output should be 'tHE qUICK bROWN fOX'.
-function swapChar(str: string) {
-  const result = str.split(" ").map(word => word.charAt(0).toLowerCase() + word.slice(1).toUpperCase()).join(" ")
-  return result
-}
-console.log(swapChar('The Quick Brown Fox'))
+// function swapChar(str: string) {
+//   const result = str.split(" ").map(word => word.charAt(0).toLowerCase() + word.slice(1).toUpperCase()).join(" ")
+//   return result
+// }
+// console.log(swapChar('The Quick Brown Fox'))
 
+// Q20. Write a JavaScript program that takes an array with mixed data type and calculates the sum of all numbers.
+// function sumOfNum(arr: any[]) {
+//   const result = arr.filter(item => typeof item === "number").reduce((sum, num) => sum + num, 0);
+//   return result
+// }
+// console.log(sumOfNum([1, "ch", "2", 5, true, 9, "hi", 7]))
 
+// Q21. Write a JavaScript program to get all the indexes where NaN is found in a given array of numbers and NaN.
+// function getNaNIndexes(arr: any[]) {
+//   return arr.reduce((indexes, value, index) => {
+//     if (Number.isNaN(value)) {
+//       indexes.push(index);
+//     }
+//     return indexes;
+//   }, []);
+// }
+
+// console.log(getNaNIndexes([2, 5, NaN, 7, 3, NaN, 7, 55, 8, NaN, 65, 75]))
