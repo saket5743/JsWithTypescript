@@ -226,3 +226,23 @@
 // }
 
 // console.log(getNaNIndexes([2, 5, NaN, 7, 3, NaN, 7, 55, 8, NaN, 65, 75]))
+
+// Q22. Write a JavaScript program to get the first and last occurrence of a specified value in
+// an array.
+function getFirstLastOccurrence(arr: any[], value: any) {
+  let firstOccurrence = -1;
+  let lastOccurrence = -1;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === value) {
+      if (firstOccurrence === -1) {
+        firstOccurrence = i;
+      }
+      lastOccurrence = i;
+    }
+  }
+  return [firstOccurrence, lastOccurrence
+  ];
+}
+console.log(getFirstLastOccurrence([1, 2, 3, 4,
+  5, 6, 7, 8, 9, 10],
+  5))
